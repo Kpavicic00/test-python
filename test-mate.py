@@ -1,5 +1,7 @@
 # -*- encoding: utf-8 -*-
-def funct_data():
-    N = raw_input("\n\tUnesite broj utakmica koliko ih je ta momčad odigrala :")
+
+# enter the number of rounds
+def fun_number_of_rounds():
+    N = raw_input("  Enter the number of rounds :")
     return N
-a = funct_data()
+#################################################################################
