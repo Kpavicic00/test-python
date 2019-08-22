@@ -1,23 +1,30 @@
 # -*- encoding: utf-8 -*-
+a = 12.3456
 
-# enter the number of rounds
-def fun_number_of_rounds():
-    while True:
-        N = raw_input("  Enter the number of rounds :")
+b = a - int(a)
+temp = int(a)
+count = 2
+print(b)
+print("1-a",int(a))
+while(count > 0):
+    b= b*10
+    print("?",b)
+    count -=1
+e = int(b)
+print(e)
+print("count",count)
+count = 2
+e = e/1.0
+baza = 10**count
+kok = e/baza
+print(kok)
 
-        if N.isdigit() == True:
-            N = int(N)
-            return N
-        else:
-             print("\n\t Please input Number !!")
-             continue
-#################################################################################
-
-
-# def fun_Input_matches():
-#     #N = fun_number_of_rounds()
-#     home_goals = 0
-#     guest_golas = 0
+# n = 0.4562
+# rev = 0.0
 #
-#     number_of_ponts = 0
-#     while
+# while(n > 0):
+#     a = n * 10.0
+#     # print("n-1",n)
+#     print("a-1",a)
+
+print("rez : ", temp  +kok)
