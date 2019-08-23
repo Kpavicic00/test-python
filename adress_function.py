@@ -7,9 +7,13 @@
 # Program na početku od korisnika traži da se unesu podaci o osobi u
 #navedenom formatu a na ekranu ispisuje podatke razdvojeno. Obratiti pažnju na
 #kućni broj koji se može sastojati od kućnog broja (uvijek broj) i dodatka kućnom broju.
+def cut_number(test_string):
+    filter(lambda x: x.isdigit(), test_string)
 
-
-
+def splitt(word):
+    return [char for char in word]
+############################################################
+############################################################
 # a function that checks that the string contains an integer
 def hasNumbers(inputString):
     return any(char.isdigit() for char in inputString)
@@ -53,6 +57,20 @@ def insert_STREET():
 
         elif hasNumbers(value) == True:
              print("\n\tPlease insert STREET !!!")
+             continue
+############################################################
+############################################################
+# function for insert Addition to the house number
+def Addition_to_the_house_number():
+    while True:
+        value = raw_input("\n\tPlease insert Addition to the house number : ")
+
+        if hasNumbers(value) == False:
+            return value
+            break
+
+        elif hasNumbers(value) == True:
+             print("\n\tPlease insert Addition to the house number !!!")
              continue
 ############################################################
 ############################################################
@@ -116,10 +134,11 @@ def HOUSE_NUMBER_fun():
 ############################################################
 ############################################################
 n = number_fun()
-print("n",n)
+#print("n",n)
 array_storage = [0] * n
 count = 0
 while (n > 0):
+    print("Unesite podatke  za ",count+1,". osobu")
     string = ""
     string += insert_name()
     string += " "
@@ -128,6 +147,7 @@ while (n > 0):
     string += insert_STREET()
     string += " "
     string += str(HOUSE_NUMBER_fun())
+    string += Addition_to_the_house_number()
     string += " , "
     string += str(ZIP_code_fun())
     string += " "
@@ -136,5 +156,28 @@ while (n > 0):
     n -= 1
     array_storage[count] = string
     count +=1
+len_temp = len(array_storage)
 
-print("array_storage", array_storage)
+ime_prez = "Ime i prezime: "
+ulica = "Ulica: "
+kuc_br = "Kućni broj: "
+dod_kuc_broju = "Dodatak kućnom broju: "
+postanski_br = "Poštanski broj: "
+mjesto = "Mjesto: "
+i = 0
+
+for i in  range(0,len_temp,1):
+    temp_strin = array_storage[i]
+    data = temp_strin.split(" , ")
+    pbr_mj = data[2].split(" ")
+    ulc_dodatak = data[1]
+    tempry = filter(lambda x: x.isdigit(),data[1])
+    ulc_dodatak = ulc_dodatak.split(tempry)
+
+    print("\n\t")
+    print(ime_prez+data[0])
+    print(ulica+ulc_dodatak[0])
+    print(kuc_br+tempry)
+    print(dod_kuc_broju+ulc_dodatak[1])
+    print(postanski_br+pbr_mj[0])
+    print(mjesto+pbr_mj[1])
