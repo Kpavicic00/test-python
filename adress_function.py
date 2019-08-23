@@ -8,6 +8,7 @@ def hasNumbers(inputString):
 # function for insert name
 def insert_name():
     while True:
+
         value = raw_input("\n\tPlease insert NAME : ")
         if hasNumbers(value) == False:
             return value
