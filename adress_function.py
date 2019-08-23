@@ -1,19 +1,5 @@
 # -*- encoding: utf-8 -*-
-# Napisati funkciju koja će iz stringa u kojem se nalaze podaci o
-#osobi razdvojiti podatke i ispisati ih na ekranu. Podaci o osobi
-#koji se nalaze u stringu međusobno su odvojeni zarezom. Podaci
-#se uvijek nalaze upisani u sljedećem formatu: ime i prezime, ulica
-# i kućni broj, poštanski broj i mjesto
-# Program na početku od korisnika traži da se unesu podaci o osobi u
-#navedenom formatu a na ekranu ispisuje podatke razdvojeno. Obratiti pažnju na
-#kućni broj koji se može sastojati od kućnog broja (uvijek broj) i dodatka kućnom broju.
-def cut_number(test_string):
-    filter(lambda x: x.isdigit(), test_string)
 
-def splitt(word):
-    return [char for char in word]
-############################################################
-############################################################
 # a function that checks that the string contains an integer
 def hasNumbers(inputString):
     return any(char.isdigit() for char in inputString)
