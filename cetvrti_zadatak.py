@@ -76,6 +76,6 @@ def insert_option():
         elif hasNumbers(value) == True:
              print("\n\tPlease insert valid option !!!")
              continue
-             
+
 #######################
 insert_option()

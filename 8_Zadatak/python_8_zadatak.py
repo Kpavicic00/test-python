@@ -6,7 +6,7 @@ drugi_file = "/home/kristijan/python_test-programi/8_Zadatak/drugi_primjer.txt"
 
 
 
-with open(prvi_file, 'r') as f:
+with open(drugi_file, 'r') as f:
         data = f.read().split()
         floats = []
         for elem in data:
@@ -18,7 +18,6 @@ with open(prvi_file, 'r') as f:
 
 n = int(floats[0])
 list2 = floats[1:]
-
 
 temp_frst = [0
 for i in range(n - 1)] + [list2[n - 1]]
